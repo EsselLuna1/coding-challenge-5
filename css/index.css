@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+/*----------------
+general
+-----------------*/
+body, html {
+  background: hsl(36, 100%, 99%);
+  color: hsl(236, 13%, 42%);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.wrap {
+  display: flex;
+  row-gap: 48px;
+  flex-direction: column;
+}
+.wrap .innerWrap {
+  display: flex;
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+img {
+  width: 100%;
+}
+.spOnly {
+  display: none;
+}
+.pcOnly {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .wrap .innerWrap {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  .spOnly {
+    display: block;
+  }
+  .pcOnly {
+    display: none;
+  }
+}
+/*----------------
+common
+-----------------*/
+.attribution { 
+  color: #000; 
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { 
+  color: #000; 
+}
+.dFlex {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  display: grid;
+  gap: 72px;
+}
+/*----------------
+header
+-----------------*/
+.headerWrap {
+  width: 100%;
+  align-items: center;
+}
+.navList {
+  width: 438px;
+  margin: -8px 0 0;
+  gap: 38px;
+  justify-content: flex-start;
+}
+.navItem a {
+  font-size: 16px;
+  color: hsl(236, 13%, 42%);
+}
+.navItem a:hover {
+  color: hsl(5, 85%, 63%);
+}
+/*----------------
+main - topContent
+-----------------*/
+.topWrap {
+  gap: 29px;
+}
+.hero {
+  display: grid;
+  width: 87%;
+  gap: 26px;
+}
+.textWrap h2 {
+  color: hsl(240, 100%, 5%);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+  width: 300px;
+}
+.rightText {
+  width: 348px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.rightText p {
+  line-height: 1.5;
+}
+.readMore {
+  width: 185px;
+}
+.readMore a {
+  display: block;
+  text-transform: uppercase;
+  background: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding: 14px 14px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.readMore a:hover {
+  background: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+/*--------New---------*/
+.new {
+  width: 42%;
+  background: hsl(240, 100%, 5%);
+}
+.newWrap {
+  padding: 28px 25px 4px 26px;
+}
+.newWrap h2 {
+  font-size: 40px;
+  color: hsl(35, 77%, 62%);
+}
+.articleItem {
+  display: grid;
+  gap: 11px;
+  padding: 29px 0 30px;
+  border-bottom: 1px solid hsl(36, 100%, 99%);
+}
+.articleItem:nth-child(3) {
+  border-bottom: none;
+}
+.articleItem a {
+  color: hsl(36, 100%, 99%);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.articleItem a:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.articleItem p {
+  line-height: 1.6;
+  color: hsl(233, 8%, 79%);
+}
+/*----------------
+main - bottomContent
+-----------------*/
+.gadgetsList {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.gadgetsItem {
+  width: 31.43%;
+}
+.gadgetsItem section {
+  gap: 24px;
+}
+.gadgetsItem section img {
+  width: 100px;
+}
+.itemWrap {
+  display: grid;
+  gap: 13px;
+}
+.itemWrap h3 {
+  color: hsl(233, 8%, 79%);
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1;
+}
+.itemWrap a {
+  font-size: 18.2px;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+.itemWrap a:hover {
+  color: hsl(5, 85%, 63%);
+}
+.itemWrap p {
+  line-height: 1.6;
+}
