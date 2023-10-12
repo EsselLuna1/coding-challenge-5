@@ -13,17 +13,18 @@ body, html {
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
   text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 .wrap {
   display: flex;
+  margin: 90px 0;
   row-gap: 48px;
   flex-direction: column;
 }
 .wrap .innerWrap {
-  display: flex;
+  /* display: flex; */
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
@@ -41,10 +42,14 @@ img {
   display: block;
 }
 @media screen and (max-width: 768px) {
+  .wrap { 
+    margin: 27px 0;
+    row-gap: 24px;
+  }
   .wrap .innerWrap {
     max-width: 100%;
     width: 100%;
-    padding: 0 24px;
+    padding: 0 16px;
     box-sizing: border-box;
   }
   .spOnly {
@@ -63,7 +68,7 @@ common
   text-align: center;
 }
 .attribution a { 
-  color: #000; 
+  color: hsl(228, 45%, 44%);; 
 }
 .dFlex {
   display: flex;
@@ -73,25 +78,92 @@ main {
   display: grid;
   gap: 72px;
 }
+@media screen and (max-width: 768px) {
+  .dFlex {
+    flex-wrap: wrap;
+  }
+  main {
+    gap: 65px;
+}
+}
 /*----------------
 header
 -----------------*/
+.header {
+  position: relative;
+}
 .headerWrap {
   width: 100%;
   align-items: center;
 }
 .navList {
-  width: 438px;
+  width: 440px;
   margin: -8px 0 0;
   gap: 38px;
   justify-content: flex-start;
 }
 .navItem a {
-  font-size: 16px;
   color: hsl(236, 13%, 42%);
+  font-size: 16px;
 }
 .navItem a:hover {
   color: hsl(5, 85%, 63%);
+}
+@media screen and (max-width: 768px) {
+  .header {
+    position: relative;
+  }
+  .logo {
+    width: 13%;
+  }
+  .navList {
+    display: none;
+  }
+  .openBtn {
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    width: 40px;
+    height: 25px;
+    background: url(../assets/images/icon-menu.svg) top right no-repeat;
+    content: '';
+    cursor: pointer;
+  }
+  .closeBtn {
+    display: none;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+    width: 32px;
+    height: 31px;
+    background: url(../assets/images/icon-menu-close.svg) top right no-repeat;
+    content: '';
+    cursor: pointer;
+  }
+  .nav.show {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: hsla(240, 100%, 5%, 0.5);
+    overflow-x: hidden;
+  }
+   .navList {
+    position: fixed;
+    top: 1%;
+    right: -2%;
+    width: 70%;
+    height: 100vh;
+    padding: 136px 22px;
+    background-color: white;
+    line-height: 47px;
+  }
+  .navItem a {
+    font-size: 18px;
+  }
 }
 /*----------------
 main - topContent
@@ -105,15 +177,15 @@ main - topContent
   gap: 26px;
 }
 .textWrap h2 {
+  width: 300px;
   color: hsl(240, 100%, 5%);
   font-size: 56px;
   font-weight: 800;
   line-height: 1;
-  width: 300px;
 }
 .rightText {
-  width: 348px;
   display: flex;
+  width: 348px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -125,16 +197,38 @@ main - topContent
 }
 .readMore a {
   display: block;
-  text-transform: uppercase;
+  padding: 14px 14px;
   background: hsl(5, 85%, 63%);
   color: hsl(36, 100%, 99%);
-  padding: 14px 14px;
-  letter-spacing: 4px;
   text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 .readMore a:hover {
   background: hsl(240, 100%, 5%);
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .topWrap {
+    gap: 63px;
+  }
+  .hero {
+    width: 100%;
+  }
+  .textWrap {
+    gap: 17px;
+  }
+  .textWrap h2 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .rightText {
+    width: 100%;
+    gap: 25px;
+  }
+  .rightText p {
+    line-height: 1.7;
+  }
 }
 /*--------New---------*/
 .new {
@@ -145,14 +239,14 @@ main - topContent
   padding: 28px 25px 4px 26px;
 }
 .newWrap h2 {
-  font-size: 40px;
   color: hsl(35, 77%, 62%);
+  font-size: 40px;
 }
 .articleItem {
   display: grid;
-  gap: 11px;
   padding: 29px 0 30px;
   border-bottom: 1px solid hsl(36, 100%, 99%);
+  gap: 11px;
 }
 .articleItem:nth-child(3) {
   border-bottom: none;
@@ -168,8 +262,26 @@ main - topContent
   cursor: pointer;
 }
 .articleItem p {
-  line-height: 1.6;
   color: hsl(233, 8%, 79%);
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .new {
+    width: 100%;
+  }
+  .newWrap {
+    padding: 21px 25px 4px 21px;
+  }
+  .newWrap h2 {
+    font-size: 32px;
+  }
+  .articleItem {
+    padding: 33px 0 30px;
+    gap: 9px;
+  }
+  .articleItem:nth-child(3) {
+    padding: 33px 0 22px;
+  }
 }
 /*----------------
 main - bottomContent
@@ -180,6 +292,7 @@ main - bottomContent
 }
 .gadgetsItem {
   width: 31.43%;
+  display: flex;
 }
 .gadgetsItem section {
   gap: 24px;
@@ -198,13 +311,25 @@ main - bottomContent
   line-height: 1;
 }
 .itemWrap a {
+  color: hsl(240, 100%, 5%);
   font-size: 18.2px;
   font-weight: 800;
-  color: hsl(240, 100%, 5%);
 }
 .itemWrap a:hover {
   color: hsl(5, 85%, 63%);
 }
 .itemWrap p {
   line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .gadgetsList {
+    gap: 34px;
+  }
+  .gadgetsItem {
+    width: 100%;
+  }
+  .gadgetsItem section {
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
 }
