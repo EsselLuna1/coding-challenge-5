@@ -1,5 +1,5 @@
-const openButton = document.querySelector('.openBtn');
 const menu = document.querySelector(".navList");
+const openButton = document.querySelector('.openBtn');
 const closeButton = document.querySelector('.closeBtn');
 
 openButton.addEventListener('click', function () {
