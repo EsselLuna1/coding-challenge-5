@@ -24,13 +24,9 @@ body, html {
   flex-direction: column;
 }
 .wrap .innerWrap {
-  /* display: flex; */
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
-  /* justify-content: center;
-  align-items: center;
-  flex-direction: column; */
 }
 img {
   width: 100%;
@@ -151,7 +147,7 @@ header
     background: hsla(240, 100%, 5%, 0.5);
     overflow-x: hidden;
   }
-   .navList {
+  .navList {
     position: fixed;
     top: 1%;
     right: -2%;
